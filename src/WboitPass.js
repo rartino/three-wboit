@@ -415,8 +415,8 @@ class WboitPass extends Pass {
 
 					for ( let i = 0; i < materials.length; i ++ ) {
 
-						materials[ i ].depthWrite = testCache.get( materials[ i ] );
-						materials[ i ].depthTest = writeCache.get( materials[ i ] );
+						materials[ i ].depthTest = testCache.get( materials[ i ] );
+						materials[ i ].depthWrite = writeCache.get( materials[ i ] );
 
 					}
 
