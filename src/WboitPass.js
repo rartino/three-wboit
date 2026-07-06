@@ -184,8 +184,10 @@ class WboitPass extends Pass {
 		this.compositePass.material.transparent = true;
 		this.compositePass.material.blending = CustomBlending;
 		this.compositePass.material.blendEquation = AddEquation;
-		this.compositePass.material.blendSrc = OneMinusSrcAlphaFactor;
-		this.compositePass.material.blendDst = SrcAlphaFactor;
+		this.compositePass.material.blendSrc = SrcAlphaFactor;
+		this.compositePass.material.blendDst = OneMinusSrcAlphaFactor;
+		this.compositePass.material.blendSrcAlpha = OneFactor;
+		this.compositePass.material.blendDstAlpha = OneMinusSrcAlphaFactor;
 
 		const testPass = new ShaderPass( FillShader );
 		const testR = 1.0;
